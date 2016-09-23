@@ -22,23 +22,49 @@ var body = document.querySelector('body');
 
 // Part 1
 
-
 function makeMiddleEarth() {
-  // create a section tag with an id of middle-earth
-  // add each land as an article tag
-  // inside each article tag include an h1 with the name of the land
-  // append middle-earth to your document body
+  var middleEarth = document.createElement("section")
+  middleEarth['id'] = 'middle-earth'
+  document.body.appendChild(middleEarth);
+
+for (var i = 0; i < lands.length; i++) {
+  var landed = document.createElement('article')
+  document.querySelector('#middle-earth').appendChild(landed)
+  document.querySelectorAll('article')[i].innerHTML = '<h1>' + lands[i] + '</h1>'
+  }
 }
 
 makeMiddleEarth();
+// makeMiddleEarth();
+// create a section tag with an id of middle-earth
+// add each land as an article tag
+// inside each article tag include an h1 with the name of the land
+// append middle-earth to your document body
 
 
 // Part 2
 
 function makeHobbits() {
-  // display an unordered list of hobbits in the shire (which is the second article tag on the page)
-  // give each hobbit a class of hobbit
+var ullist = document.createElement('ul')
+document.querySelector('h1').appendChild(ullist)
+
+for (var i = 0; i < hobbits.length; i++) {
+  var lilist = document.createElement('li')
+  document.querySelector('ul').appendChild(lilist)
+  lilist.innerHTML = hobbits[i]
+  lilist.className = "hobbit"
+ }
 }
+
+makeHobbits();
+// document.querySelector('h1').appendChild. = "<ul></ul>"
+// for (var i = 0; i < hobbits[i]; i++) {
+// document.querySelectorAll('ul')[0].innerHTML = "<li><li>"
+// document.querySelectorAll('li')[i].innerHTML = '<p>' + hobbits[i] + '</p>'
+// document.querySelectorAll('li')[i].className = "hobbit"
+
+  // display an unordered list of hobbits in the shire (which is the first article tag on the page)
+ // }// give each hobbit a class of hobbit
 
 
 // Part 3
@@ -48,31 +74,67 @@ function keepItSecretKeepItSafe() {
   // give the div a class of 'magic-imbued-jewelry'
   // add an event listener so that when a user clicks on the ring, the nazgulScreech function (provided) is invoked
   // add the ring as a child of Frodo
+var theRing = document.createElement('div')
+theRing['id'] = "the-ring"
+theRing.className = "magic-imbued-jewelry"
+
+var screech = document.getElementById("nazgul-screech");
+
+function playAudio() {
+  screech.play();
 }
 
+theRing.addEventListener('click',playAudio)
 
+document.querySelector('li').appendChild(theRing)
+}
+
+keepItSecretKeepItSafe();
 // Part 4
 
 
 function makeBuddies() {
+
+var aside = document.createElement('aside')
+
+var ullist2 = document.createElement('ul')
+document.querySelectorAll('h1')[1].appendChild(ullist2)
+
+ for (var i = 0; i < buddies.length; i++) {
+   var lilist2 = document.createElement('li')
+   document.querySelectorAll('ul')[1].appendChild(lilist2)
+   lilist2.innerHTML = buddies[i]
+   lilist2.className = "buddies"
+  }
+ //
+ // document.querySelectorAll('h1')[1].appendChild(aside)
+ // }
+
+
   // create an aside tag
   // attach an unordered list of the 'buddies' in the aside
   // insert your aside as a child element of rivendell
 }
+
+makeBuddies();
 
 
 // Part 5
 
 
 function beautifulStranger() {
+
+  aragorn[3].nodeValue = "Aragorn"
   // change the 'Strider' textnode to 'Aragorn'
 }
+beautifulStranger();
 
 
 // Part 6
 
 function leaveTheShire() {
   // assemble the hobbits and move them to Rivendell
+
 }
 
 
