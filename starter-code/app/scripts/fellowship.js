@@ -271,15 +271,16 @@ function thereAndBackAgain() {
 for(var i = 0; i < 2; i++) {
   var list = document.getElementsByTagName('h1')[2]
   var hobbits = list.querySelector('li')
-  // theShire.appendChild(hobbits)
-  var moveHobbits = list.removeChild(list.childNodes[1])
+  theShire.appendChild(hobbits)
+  // var moveHobbits = list.removeChild(list.childNodes[1])
   // theShire.appendChild(moveHobbits)
   // console.log(hobbits)
 }
 
-for(var i = 1; i >= 0; i--) {
+for(var i = 0; i < 2; i++) {
   var list2 = document.getElementById('the-fellowship')
-  var hobbits2 = document.querySelectorAll('li')[0]
+  var hobbits2 = list2.querySelector('li')
+  theShire.appendChild(hobbits2)
   // var moveHobbits2 = list2.removeChild(hobbits2)
  // console.log(hobbits2)
 }
@@ -288,9 +289,9 @@ for(var i = 1; i >= 0; i--) {
 // theShire.appendChild(moveHobbits2)
 
 
-  // var middleEarth = document.getElementById('middle-earth')
-  // var eye = document.querySelectorAll('article')[2]
-  // var removeEye = middleEarth.removeChild(eye)
+  var middleEarth = document.getElementById('middle-earth')
+  var eye = document.querySelectorAll('article')[2]
+  var removeEye = middleEarth.removeChild(eye)
 
 }
 
