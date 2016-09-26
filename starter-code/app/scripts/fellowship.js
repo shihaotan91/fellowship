@@ -285,9 +285,6 @@ for(var i = 0; i < 2; i++) {
  // console.log(hobbits2)
 }
 
-// theShire.appendChild(moveHobbits)
-// theShire.appendChild(moveHobbits2)
-
 
   var middleEarth = document.getElementById('middle-earth')
   var eye = document.querySelectorAll('article')[2]
